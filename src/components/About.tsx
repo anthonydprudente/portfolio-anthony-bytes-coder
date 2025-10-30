@@ -4,8 +4,7 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <span className="text-accent code-text text-sm">$ cat about.txt</span>
-            <h2 className="text-4xl md:text-5xl font-bold code-text neon-glow mt-2">
+            <h2 className="text-4xl md:text-5xl font-bold code-text neon-glow">
               About Me
             </h2>
           </div>

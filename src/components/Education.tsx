@@ -1,4 +1,5 @@
 import { GraduationCap, Award } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const Education = () => {
   const education = [
@@ -35,19 +36,24 @@ const Education = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
-            <span className="text-accent code-text text-sm">$ cat education.json</span>
-            <h2 className="text-4xl md:text-5xl font-bold code-text neon-glow mt-2">
+            <h2 className="text-4xl md:text-5xl font-bold code-text neon-glow">
               Education & Certifications
             </h2>
           </div>
 
-          {/* Education */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-primary mb-8 code-text flex items-center gap-2">
-              <GraduationCap className="w-6 h-6" />
-              Education
-            </h3>
-            <div className="space-y-4">
+          <Tabs defaultValue="education" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="education" className="code-text flex items-center gap-2">
+                <GraduationCap className="w-4 h-4" />
+                Education
+              </TabsTrigger>
+              <TabsTrigger value="certifications" className="code-text flex items-center gap-2">
+                <Award className="w-4 h-4" />
+                Certifications
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="education" className="space-y-4">
               {education.map((edu, index) => (
                 <div 
                   key={index}
@@ -62,16 +68,9 @@ const Education = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+            </TabsContent>
 
-          {/* Certifications */}
-          <div>
-            <h3 className="text-2xl font-bold text-primary mb-8 code-text flex items-center gap-2">
-              <Award className="w-6 h-6" />
-              Certifications
-            </h3>
-            <div className="space-y-4">
+            <TabsContent value="certifications" className="space-y-4">
               {certifications.map((cert, index) => (
                 <div 
                   key={index}
@@ -83,8 +82,8 @@ const Education = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </section>

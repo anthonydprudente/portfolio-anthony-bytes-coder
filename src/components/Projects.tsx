@@ -27,8 +27,7 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <span className="text-accent code-text text-sm">$ cd ./projects && ls</span>
-            <h2 className="text-4xl md:text-5xl font-bold code-text neon-glow mt-2">
+            <h2 className="text-4xl md:text-5xl font-bold code-text neon-glow">
               Featured Projects
             </h2>
           </div>
