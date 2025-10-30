@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
+import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -30,6 +31,16 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+          <div className="flex justify-center mb-8">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden neon-border">
+              <img 
+                src={profileImage} 
+                alt="Anthony Prudente" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold code-text">
             {displayText}
             <span className="animate-terminal-cursor text-primary">|</span>
